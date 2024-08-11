@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row g-4">
+    @for (product of allProducts; track $index) {
+    <div class="col-md-3">
+      <app-single-product [productItem]="product"></app-single-product>
+    </div>
+
+    } @empty {
+    <!-- !=== if you got here that mean that the server is broken because it happened to me and i got this message 'Connection timed out' 😂😂-->
+    <!--  والله الكود شفال ي هندسه🤣 -->
+    <h2 class="alert alert-danger">No items found 😢😢</h2>
+    }
+  </div>
+</div>

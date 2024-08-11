@@ -1,0 +1,25 @@
+<div class="item">
+  <div class="card" style="width: 18rem">
+    <img src="{{ productItem.image }}" class="card-img-top w-100" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title text-center">
+        {{ productItem.title.split(" ").splice(0, 5).join(" ") }}
+      </h5>
+      <p class="card-text">
+        {{ productItem.description.split(" ").splice(0, 10).join(" ") }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <span class="fw-bold">price</span> {{ productItem.price }}
+      </li>
+      <li class="list-group-item">
+        <span class="fw-bold">category</span>
+        {{ productItem.category }}
+      </li>
+    </ul>
+    <div class="card-body">
+      <a class="card-link btn btn-info w-100">Show Details</a>
+    </div>
+  </div>
+</div>
